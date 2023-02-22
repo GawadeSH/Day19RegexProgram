@@ -8,7 +8,7 @@ public class UserRegistration
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program: ");
 
-        String firstName, lastName, mail,MobileNumber;
+        String firstName, lastName, mail,MobileNumber,password;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter first name:");
         firstName = s.nextLine();
@@ -53,10 +53,24 @@ public class UserRegistration
             System.out.println("Invalid Mobile Number");
         }
 
+        System.out.println("Enter password :");
+        password = s.nextLine();
+
+        if (password.matches("[a-z]{8}") == true)
+        {
+            System.out.println("Valid password ");
+        }
+        else
+        {
+            System.out.println("Invalid password ");
+        }
+
+
 
 
 
     }
 }
+
 
 
