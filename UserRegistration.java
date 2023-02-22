@@ -8,7 +8,7 @@ public class UserRegistration
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program: ");
 
-        String firstName, lastName, mail;
+        String firstName, lastName, mail,MobileNumber;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter first name:");
         firstName = s.nextLine();
@@ -40,10 +40,23 @@ public class UserRegistration
         {
             System.out.println("Invalid e-mail id");
         }
+
+
+        System.out.println("Enter Mobile Number :");
+        MobileNumber = s.nextLine();
+        if (MobileNumber.matches("[0-9]{2}[6-9][0-9]{9}") == true)
+        {
+            System.out.println("Valid Mobile Number");
+        }
+        else
+        {
+            System.out.println("Invalid Mobile Number");
+        }
+
+
+
+
     }
-
-
-
-    }
+}
 
 
